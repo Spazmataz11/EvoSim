@@ -32,7 +32,7 @@ litter = 1;
 distanceToSpawn = 20;
 angleToSpawn = 0;
 metabolicRate = 3;
-energyThreshold = 15;
-partingGift = 10;
+energyThreshold = 10;
+partingGift = 5;
 
 show_debug_message("The Progenitor is born!" + string(id));

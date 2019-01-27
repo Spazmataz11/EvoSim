@@ -2,11 +2,12 @@
 /// @param upper_value_limit
 /// @param range_of_mutation
 geneToMutate = argument0;
-show_debug_message("mutations script ran"+string(geneToMutate));
+
 upperGeneLimit = argument1;
 mutationRange = argument2;
 mutation = random_range(-mutationRange,mutationRange);
-mutationChance = random_range(1,5);
+mutationChance = round(random_range(1,5));
+show_debug_message("mutations script ran"+string(mutationChance));
 if mutationChance == 3{
 	geneToMutate += mutation;
 	clamp(geneToMutate,0,upperGeneLimit);
