@@ -8,7 +8,7 @@ parent = 0;
 //changing values (non-genetic)
 energy = 0; //~~?
 mass = 10; //~~! parting gift of parent
-
+spawnAngle = 0;
 
 //inheritance logic
 

@@ -38,24 +38,19 @@ else{
 if Phenotype[1] == 1{
 	if (energy >= Genotype[1,0]){
 		repeat(Genotype[1,1]){
-			var child = instance_create_layer(x + lengthdir_x(Genotype[1,3],Genotype[1,4]),y + lengthdir_y(Genotype[1,3],Genotype[1,4]),"Instances",oReplicator); //creates child and saves it's unique ID into a variable
+			spawnAngle = random_range(0,359);
+			var child = instance_create_layer(x + lengthdir_x(Genotype[1,3],spawnAngle),y + lengthdir_y(Genotype[1,3],spawnAngle),"Instances",oReplicator); //creates child and saves it's unique ID into a variable
 			child.parent = id; //sets the parent body of the arm to this object
-			child.Genotype[0,0] = sGeneMutator(Genotype[0,0],100,2);
-			child.Genotype[1,0] = sGeneMutator(Genotype[1,0],100,2);
-			child.Genotype[1,1] = sGeneMutator(Genotype[1,1],100,2);
-			child.Genotype[1,2] = sGeneMutator(Genotype[1,2],100,2);
+			child.Genotype[0,0] = sGeneMutator(Genotype[0,0],100,5,id);
+			child.Genotype[1,0] = sGeneMutator(Genotype[1,0],100,5,id);
+			child.Genotype[1,1] = sGeneMutator(Genotype[1,1],100,5,id);
+			child.Genotype[1,2] = sGeneMutator(Genotype[1,2],100,5,id);
 			child.mass = Genotype[1,2];
-			child.Genotype[1,3] = sGeneMutator(Genotype[1,3],100,2);
-			child.Genotype[1,4] = sGeneMutator(Genotype[1,4],359,50);
+			child.Genotype[1,3] = sGeneMutator(Genotype[1,3],100,5,id);
+			child.Genotype[1,4] = sGeneMutator(Genotype[1,4],359,50,id);
 			
 			energy -= Genotype[1,2]; //parting gift
 		}
 		
 	}
 }
-
-
-
-
-
-
