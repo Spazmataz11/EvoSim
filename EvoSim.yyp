@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "19739032-765c-48f4-840a-2d5653a346bb",
+            "Value": {
+                "id": "1bfc9a4f-848c-454e-9948-01a89209f2aa",
+                "resourcePath": "scripts\\sGeneMutator\\sGeneMutator.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "298a0b04-3ea8-40fa-b441-d09abf0a6945",
             "Value": {
                 "id": "1236b826-a44b-40f6-a97f-18e8aaa5026b",
@@ -84,6 +92,14 @@
                 "id": "8203550c-347a-4014-a3d6-e7591109badb",
                 "resourcePath": "views\\45321fb6-2378-4cf7-929a-0badc4ea3a9d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "47a85229-cffd-41a5-ba2a-657b275040f4",
+            "Value": {
+                "id": "aad874fc-8f1a-4111-b9cd-9660859b8a1b",
+                "resourcePath": "objects\\oReplicator\\oReplicator.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -170,7 +186,7 @@
             "Key": "abb9141c-dc9b-4f97-a3f7-d61ae3b92d06",
             "Value": {
                 "id": "cc3a58be-5fc8-40ec-927f-cf5c22b4b285",
-                "resourcePath": "objects\\oReplicator\\oReplicator.yy",
+                "resourcePath": "objects\\oProgenitor\\oProgenitor.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -232,7 +248,7 @@
         }
     ],
     "script_order": [
-        
+        "19739032-765c-48f4-840a-2d5653a346bb"
     ],
     "tutorial": ""
 }

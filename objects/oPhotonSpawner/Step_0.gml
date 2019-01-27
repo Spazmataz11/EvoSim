@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-steps += 10;
+steps += 20;
 if steps >= room_speed
 {
 steps = 0;

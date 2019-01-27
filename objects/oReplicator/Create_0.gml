@@ -25,14 +25,30 @@ repeat(2){ //repeat for number of genes
 
 
 
+//Genotype 0 = METABOLISM
+/*
+	* 0 = Metabolic Rate. Number of seconds until 1 food is converted into 1 energy
+*/
+Genotype[0,0] = 0;
 
+
+
+
+//Genotype 1 = REPRODUCTION
+/*
+	* 0-Energy Threshold. Amount of energy required before reproduction occours
+	* 1-Litter. Number of offspring per reproduction cycle
+	* 2-Parting Gift. Amount of energy given to each child
+	* 3-Distance. Distance a child spawn from the parent
+	* 4-Angle. Angle at which the child spawns
+*/
+Genotype[1,0] = 0;
+Genotype[1,1] = 0;
+Genotype[1,2] = 0;
+Genotype[1,3] = 0;
+Genotype[1,4] = 0;
 
 //variables that need to be linked to genes
-energyCap = 20;
 
-distanceToSpawn = 20;
-angleToSpawn = random_range(0,359);
-metabolicRate = 3;
-energyThreshold = 15;
 
 show_debug_message("New replicator!" + string(id));
