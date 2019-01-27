@@ -4,7 +4,7 @@
 seconds = 0;
 steps = 0;
 parent = 0;
-
+Reposition = false;
 //changing values (non-genetic)
 energy = 0; //~~?
 mass = 10; //~~! parting gift of parent
@@ -51,4 +51,4 @@ Genotype[1,4] = 0;
 //variables that need to be linked to genes
 
 
-show_debug_message("New replicator!" + string(id));
+show_debug_message("New replicator: " + string(id));
