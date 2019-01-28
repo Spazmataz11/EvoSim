@@ -45,7 +45,7 @@ if Phenotype[1] == 1{
 			child.Genotype[1,0] = energyThreshold;
 			child.Genotype[1,1] = litter;
 			child.Genotype[1,2] = partingGift;
-			child.mass = partingGift;
+			child.changeableValues[1] = partingGift;
 			child.Genotype[1,3] = distanceToSpawn;
 			child.Genotype[1,4] = angleToSpawn;
 		}

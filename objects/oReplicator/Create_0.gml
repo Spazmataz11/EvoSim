@@ -1,30 +1,39 @@
 /// @description Initialise genetics and game variables
 
-var a;
-a = 5; //one less than number of changeable values
-repeat(6){ //repeat for number of genes
-	changeableValues[a] = 0; // this array dictates wether or not behaviours/functions are expressed
+
+
+//changeableValues[] init
+/*
+	* 0-parent
+	* 1-mass
+	* 2-energy
+	* 3-
+	
+	//!REMEMBER! to change the 'a' variable when adding/removing a variable in this array 
+*/
+var a=2; //one less than number of changeable values
+repeat(a+1){
+	changeableValues[a] = 0;
 	a -= 1;
 }
-//game variables
+
+//non arrayable(?) changeable variables
+Reposition = false;
+
+
+
+//game variables (potential to move these to one timekeeping object?)
 seconds = 0;
 steps = 0;
-parent = 0;
-Reposition = false;
-//changing values (non-genetic)
-energy = 0; //~~?
-mass = 10; //~~! parting gift of parent
-spawnAngle = 0;
-
-//inheritance logic
 
 
 
 
-//genetic switches this will have to be completely re-written when we want them to mutate
-var i;
-i = 1; //one less than number of genes
-repeat(2){ //repeat for number of genes
+
+
+//genetic switches. this will have to be completely re-written when we want them to mutate
+var i = 1;//one less than number of genes
+repeat(i+1){ //repeat for number of genes
 	Phenotype[i] = 1; // this array dictates wether or not behaviours/functions are expressed
 	i -= 1;
 }
