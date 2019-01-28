@@ -25,7 +25,7 @@ if Phenotype[0] == 1{
 	}
 	
 	if mass <= 0{
-	show_debug_message(string(id)+"starved!")
+	show_debug_message(string(id)+"The Progenitor Starved!")
 	instance_destroy();	
 	}
 	

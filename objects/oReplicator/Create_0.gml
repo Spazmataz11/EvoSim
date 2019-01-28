@@ -1,5 +1,11 @@
 /// @description Initialise genetics and game variables
 
+var a;
+a = 5; //one less than number of changeable values
+repeat(6){ //repeat for number of genes
+	changeableValues[a] = 0; // this array dictates wether or not behaviours/functions are expressed
+	a -= 1;
+}
 //game variables
 seconds = 0;
 steps = 0;
@@ -30,7 +36,6 @@ repeat(2){ //repeat for number of genes
 	* 0 = Metabolic Rate. Number of seconds until 1 food is converted into 1 energy
 */
 Genotype[0,0] = 0;
-
 
 
 
