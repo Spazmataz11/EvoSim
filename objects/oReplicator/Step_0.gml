@@ -4,16 +4,14 @@ clamp(changeableValues[2],0,999);
 clamp(changeableValues[1],0,999);
 steps += 1;
 if steps >= room_speed{ 
-steps = 0;
-seconds += 1;
+	steps = 0;
+	seconds += 1;
 }
 
 otherRep = instance_place(x,y,oReplicator)
 if instance_exists(otherRep){
-    //if MoveToPlayer == false{
-        Reposition = true;
-        move_towards_point(otherRep.x+(random_range(-1,1)),otherRep.y +(random_range(-1,1)),-1);
-    //}
+	Reposition = true;
+    move_towards_point(otherRep.x+(random_range(-1,1)),otherRep.y +(random_range(-1,1)),-1);
 }
 if Reposition == true{
     if !instance_exists(otherRep){
@@ -45,9 +43,6 @@ if Phenotype[0] == 1{
 	
 }
 
-else{
-	
-}
 
 if Phenotype[1] == 1{
 	if (changeableValues[2] >= Genotype[1,0]) && (changeableValues[2] >= (Genotype[1,2] * Genotype[1,1])){

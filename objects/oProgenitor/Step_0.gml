@@ -14,14 +14,12 @@ if Phenotype[0] == 1{
 	if inst != noone{
 		with (inst) instance_destroy();
 		mass += 1;
-		//show_debug_message(string(id) + "mass=" + string(mass));
 	}
 	
 	if seconds >= metabolicRate && mass > 0{
 	mass -= 1;
 	energy += 1;
 	seconds = 0;
-	//show_debug_message(string(energy));
 	}
 	
 	if mass <= 0{
@@ -49,12 +47,6 @@ if Phenotype[1] == 1{
 			child.Genotype[1,3] = distanceToSpawn;
 			child.Genotype[1,4] = angleToSpawn;
 		}
-		energy -= partingGift; //parting gift
+		energy -= partingGift;
 	}
 }
-
-
-
-
-
-
