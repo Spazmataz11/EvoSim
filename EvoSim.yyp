@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "f98b16e9-fec3-4ad1-a6bb-1a0728191fe1",
+            "Value": {
+                "id": "24639252-ecb0-4d23-98de-cad2dbf10425",
+                "resourcePath": "objects\\oGUI\\oGUI.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fc00fee5-3d1d-4a38-84d7-960dd4e494da",
             "Value": {
                 "id": "48ca4ad1-272c-4e41-9c5f-b92d7b77f50c",
