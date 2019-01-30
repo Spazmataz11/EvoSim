@@ -24,6 +24,7 @@ Reposition = false;
 
 //game variables (potential to move these to one timekeeping object?)
 seconds = 0;
+eatSeconds = 0;
 steps = 0;
 
 
@@ -31,20 +32,33 @@ steps = 0;
 
 
 
-//genetic switches. this will have to be completely re-written when we want them to mutate
-var i = 1;//one less than number of genes
-repeat(i+1){ //repeat for number of genes
-	Phenotype[i] = 1; // this array dictates wether or not behaviours/functions are expressed
-	i -= 1;
-}
+//Phenotype (on/off of genes)
+/*
+	* 0-
+	* 1-
+	* 2-
+	* 3-
+	* 4-
+*/
+
+Phenotype[0] = 1;
+Phenotype[1] = 1;
+Phenotype[2] = 1;
+
+
+
 
 
 
 //Genotype 0 = METABOLISM
 /*
 	* 0 = Metabolic Rate. Number of seconds until 1 food is converted into 1 energy
+	* 1 = Mass Type
+	* 2 = Eats: (reference mass type) 0 = mass type of Photons
 */
 Genotype[0,0] = 0;
+Genotype[0,1] = 1;
+Genotype[0,2] = 0;
 
 
 
@@ -63,6 +77,6 @@ Genotype[1,3] = 0;
 Genotype[1,4] = 0;
 
 //variables that need to be linked to genes
-
+touch = false;
 
 show_debug_message("New replicator: " + string(id));

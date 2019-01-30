@@ -34,5 +34,7 @@ angleToSpawn = 0;
 metabolicRate = 3;
 energyThreshold = 10;
 partingGift = 5;
+massType = 1;
+eats = 0;
 
 show_debug_message("The Progenitor is born! " + string(id));
