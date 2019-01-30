@@ -9,7 +9,7 @@ if steps >= room_speed{
 	eatSeconds += 1;
 }
 
-#region //anti-stacking repositioning
+#region //anti-stacking repositioning. This might have to go at some point. can forsee conflict
 otherRep = instance_place(x,y,oReplicator)
 if instance_exists(otherRep){
 	Reposition = true;
@@ -35,12 +35,14 @@ if Phenotype[2] == 1{
 	}
 }
 
-//EAT!     Just need to sort out speed of eating. I think directly tie into metabolic rate
+//EAT!     Just need to sort out speed of eating. I think directly tie into metabolic rate.
 if touch = true && touchInst.Genotype[0,1] = Genotype[0,2] && eatSeconds >= (Genotype[0,0]/2){
 	touchInst.changeableValues[1] -= 1;
 	changeableValues[1] += 1;
 	eatSeconds = 0;
 }
+
+
 
 //Metabolism
 if Phenotype[0] == 1{	
@@ -74,7 +76,6 @@ if Phenotype[1] == 1{
 			child.Genotype[1,4] = sGeneMutator(Genotype[1,4],0,359,10,child.id,"reproductionAngle");
 			
 			changeableValues[2] -= Genotype[1,2]; //parting gift
-		}
-		
+		}		
 	}
 }
