@@ -5,6 +5,7 @@ randomize();
 seconds = 0;
 steps = 0;
 parent = 0;
+offspringCount = 0;
 
 //changing values (non-genetic)
 energy = 14; //~~?

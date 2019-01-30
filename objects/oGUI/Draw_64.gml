@@ -4,9 +4,9 @@ draw_text(10, 10, "Replicator Info");
 
 if ( mouse_check_button_pressed( mb_left ))
     {
-     if (instance_position( mouse_x, mouse_y, !oProgenitor ) )
+     if (instance_position( mouse_x, mouse_y, oReplicator ) )
         {
-        click_id = instance_position(mouse_x, mouse_y, !oProgenitor );
+        click_id = instance_position(mouse_x, mouse_y, oReplicator );
         buff1 = string(click_id.Genotype[1,0]);
         buff2 = string(click_id.Genotype[1,1]);
         buff3 = string(click_id.Genotype[1,2]);
@@ -22,7 +22,9 @@ if ( mouse_check_button_pressed( mb_left ))
                 last_id = click_id;
             }else{
                 click_id.image_blend = make_colour_hsv(0,0,255);
-                last_id.image_blend = make_colour_hsv(255,255,255);
+				if (instance_exists(last_id)){
+					last_id.image_blend = make_colour_hsv(255,255,255);
+				}
             }
         text_on = true;
         }else{

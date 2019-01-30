@@ -48,7 +48,12 @@ if Phenotype[1] == 1{
 			child.changeableValues[1] = partingGift;
 			child.Genotype[1,3] = distanceToSpawn;
 			child.Genotype[1,4] = angleToSpawn;
+			offspringCount++;
 		}
 		energy -= partingGift;
+		
 	}
+}
+if (offspringCount >=2){
+	instance_destroy();	
 }
